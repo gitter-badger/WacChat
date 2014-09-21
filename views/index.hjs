@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app='wacc2014'>
+  <head>
+    <title>Wacc 2014</title>
+    
+    <!-- JQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Optional theme -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Angular JS -->
+    <script src="bower_components/angular/angular.js"></script>
+    <!-- Angular JS routing -->
+    <script src="bower_components/angular-route/angular-route.min.js"></script>    
+    
+    <!-- Private styles and app -->
+    <script src="javascripts/app.js"></script>
+    <link rel='stylesheet' media="screen" href='/stylesheets/style.css' />
+    
+    <!-- Angular Controllers -->
+    <script src="javascripts/controllers/chat.js"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="page-header col-sm-6">
+        <h1>Chat Application</h1>
+      </div>
+    </div>
+    <div ng-view></div>
+  </body>
+</html>
