@@ -7,15 +7,17 @@ wacc2014App.controller('ChatController', function($scope, $http, $timeout, Messa
   $scope.send_message = function() {
     console.log($scope.message);
     Message.save($scope.message);
+    $scope.messages.push($scope.message)
     $scope.message = {name: $scope.message.name};
+
   }
   
-  refresh();
-  function refresh() {
-    $scope.messages = Message.query();
-    $timeout(function(){
-      refresh();
-    }, 2000);
-  }
   
+  $scope.refresh = function() {
+    Message.query(function(data){
+      $scope.messages = data;
+      console.log('refreshed' + data);
+    });
+    console.log($scope.messages)
+  }
 });

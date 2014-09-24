@@ -1,6 +1,3 @@
-wacc2014Services.factory('Message', ['$resource',
-  function($resource){
-    return $resource('api/messages/:messageId', {}, {
-      query: {method:'GET', isArray:true}
-  });
-}]);
+wacc2014Services.factory('Message', function($resource){
+    return $resource('api/messages/:messageId', {messageId: '@messageId'});
+});
