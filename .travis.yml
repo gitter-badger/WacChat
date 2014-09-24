@@ -8,6 +8,7 @@ deploy:
   provider: heroku
   api_key:
     secure: h9fTFB78Fg3T68rNq7lJOAxeBPMEB574d5ycdXkRHFaTTPdUPFQqAR2IpQGt5TDEQ5qN1xkHdVqVLSbcxLPaZywedjqQk6xUgkyIXwkdyBKrtspvk47PfB6hi/hZgwqUS/LvtTppmEa8b6NroJXYZ4x24uF49+9rR9XXnPFfX+s=
+  skip_cleanup: true
   app: 
     production: wacc2014
   on:
