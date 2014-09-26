@@ -18,6 +18,9 @@ fs.readdirSync(__dirname + '/app/models').forEach(function (file) {
 // Initialize MongoDB
 require('./config/mongo')(app, config);
 
+// Websocket support
+require('./config/websocket')(app);
+
 // API routes
 require('./config/routes')(app);
 
